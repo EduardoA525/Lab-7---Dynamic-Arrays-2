@@ -24,7 +24,7 @@ const int MAX_SIZE = 5;
 
 //Prototypes
 void displayArray(string *stringArray, int size);
-//reverseArray();
+string *reverseArray(string *stringArray , int size);
 
 int main(){
 
@@ -38,7 +38,7 @@ int main(){
     *(stringArray + 3) = "Ron";
     *(stringArray + 4) = "John";
 
-    cout << "Original Array: " << endl;
+    cout << "Original Array: ";
     displayArray(stringArray, MAX_SIZE);
 
     //Reverse the array
@@ -53,6 +53,16 @@ void displayArray(string *stringArray, int size){
     //Loops through the entire array
     for (int i = 0; i < size; i++){
         //Like the previous Lab, as i goes up so does the array slot
-        cout << *(stringArray + i) << endl;
+        cout << *(stringArray + i) << " ";
     }
+
+    cout << endl;
+}
+
+//Reverse array function
+string *reverseArray(string *stringArray, int size){
+
+
+
+    
 }
