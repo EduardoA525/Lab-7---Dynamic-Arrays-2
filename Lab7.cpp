@@ -66,8 +66,6 @@ void displayArray(string *stringArray, int size){
 
 //Reverse array function
 //Swap first and last, then go closer in the array until it hits the middle
-
-//something is broken
 string *reverseArray(string *stringArray, int size){
     //Loops only for half of the array
     for (int i = 0; i < size / 2; i++){
@@ -80,4 +78,6 @@ string *reverseArray(string *stringArray, int size){
         //Item from the first half (tempString) gets put in the second half 
         *(stringArray + (size - 1 - i)) = tempString;
     }
+    //Do not output in this function
+    return stringArray;
 }
