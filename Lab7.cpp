@@ -5,8 +5,6 @@ Write a function reverseArray() which receives a dynamic string array,
 reverses the elements, and returns a pointer to the modified array. 
 The function does not output anything.
 
-Write a function displayArray() which receives a dynamic string array, and outputs its elements.
-
 In main(),
 Call the two functions appropriately to reverse and output the array.
 
@@ -25,23 +23,36 @@ using namespace std;
 const int MAX_SIZE = 5;
 
 //Prototypes
+void displayArray(string *stringArray, int size);
 //reverseArray();
-//displayArray();
 
 int main(){
 
     //Creates array with a max size of 5
     string *stringArray = new string[MAX_SIZE];
 
-    //List of names for the string with pointer notation
+    //List of names for the array with pointer notation
     *(stringArray + 0) = "Eduardo";
     *(stringArray + 1) = "Alec";
     *(stringArray + 2) = "Eman";
     *(stringArray + 3) = "Ron";
     *(stringArray + 4) = "John";
 
+    cout << "Original Array: " << endl;
+    displayArray(stringArray, MAX_SIZE);
+
+    //Reverse the array
 
     return 0;
 }
 
 //Defintions
+
+//Output array to console
+void displayArray(string *stringArray, int size){
+    //Loops through the entire array
+    for (int i = 0; i < size; i++){
+        //Like the previous Lab, as i goes up so does the array slot
+        cout << *(stringArray + i) << endl;
+    }
+}
