@@ -43,6 +43,11 @@ int main(){
 
     //Reverse the array
 
+    stringArray = reverseArray(stringArray, MAX_SIZE);
+
+    cout << "test";
+    displayArray(stringArray, MAX_SIZE);
+
     return 0;
 }
 
@@ -60,9 +65,19 @@ void displayArray(string *stringArray, int size){
 }
 
 //Reverse array function
+//Swap first and last, then go closer in the array until it hits the middle
+
+//something is broken
 string *reverseArray(string *stringArray, int size){
+    //Loops only for half of the array
+    for (int i = 0; i < size / 2; i++){
+        //Saves the item from first half in tempString
+        string tempString = *(stringArray + i);
 
+        //Item from the second half gets put in the first half
+        *(stringArray + i) = *(stringArray + (size - 1 - i));
 
-
-    
+        //Item from the first half (tempString) gets put in the second half 
+        *(stringArray + (size - 1 - i)) = tempString;
+    }
 }
